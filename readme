@@ -1,0 +1,59 @@
+create table trainee (
+    id serial primary key,
+    name varchar Not Null,
+    email_address varchar Not Null,
+    course_name varchar foreign key
+);
+
+create  table course detail (
+    id serial primary key,
+    course_name varchar unique Not Null,
+    course_duration int Not Null,
+    Campus varchar Not Null
+);
+
+
+select course_name from trainee inner join table course_detail on trainee.course_name = course_detail.course_name 
+
+
+
+
+def get_sales():
+    cur.execute("select * from sales")
+    cur.fetchall()
+    sales_data = cur.fetchall()
+    return sales_data
+sales_data= get_sales()
+
+
+
+def insert_sales():
+    cur.execute()
+    conn.commit
+
+insert_sales()
+
+sales_data= get_sales()
+print(sales_data)
+
+
+
+
+
+
+
+
+
+
+
+# class Teacher
+
+# identity--->Teacher
+# State---> name, age, email, id_no, course_taught
+# Behaviour--->Teaches, sleep, eat, workout, read, drive
+
+
+# Class Horse
+# identity--->Horse
+# State--->no, age, color, height, weight
+# Behaviour--> graze, race, rest
